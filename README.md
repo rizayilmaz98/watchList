@@ -1,7 +1,7 @@
 ## Watch List Project
 
 ### Demo
-> https://watchlist-rizayilmaz.netlify.app/
+> https://6490bb296e192d0008e05172--watchlist-rizayilmaz.netlify.app/
 ### Start 
 ```powershell
 git clone https://github.com/rizayilmaz98/watchList.git
