@@ -22,7 +22,7 @@ function SingleMovie() {
     dispatch(getMovieGenreAsync());
     axios
       .get(
-        `http://api.themoviedb.org/3/movie/${id}?api_key=${process.env.REACT_APP_MDB_KEY}`
+        `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.REACT_APP_MDB_KEY}`
       )
       .then((res) => setSingleMovieData(res.data));
   }, [id, dispatch]);
