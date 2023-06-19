@@ -137,11 +137,10 @@ function SingleMovie() {
               <div className="text-center text-md-end pb-2 pe-2 pt-5 mt-4 w-100">
                 <Link to={`${singleMovieData.homepage}`} target="_blank">
                   <button className="px-3 py-2 fs-8 rounded-2 bg-fourteenth border-0 text-seventh fw-semibold me-2">
-                    {" "}
                     <BsLink45Deg className="mb-1" /> Movie Page
                   </button>
                 </Link>
-                {favoriteList && favoriteList.find((e) => e.title === singleMovieData.title) ? (
+                  {favoriteList && favoriteList.find((e) => e.title === singleMovieData.title) ? (
                   <button
                     className="px-3 py-2 fs-8 rounded-2 border-0 text-seventh fw-semibold bg-sixth"
                     onClick={() =>
@@ -156,7 +155,6 @@ function SingleMovie() {
                     className="px-3 py-2 fs-8 rounded-2 border-0 text-seventh fw-semibold bg-thirteenth"
                     onClick={() => dispatch(addFavoriteList(singleMovieData))}
                   >
-                    {" "}
                     <BsPlusLg className="mb-1 me-1" />
                     Add to WatchList
                   </button>

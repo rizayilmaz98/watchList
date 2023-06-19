@@ -16,7 +16,7 @@ export const moviesSlice = createSlice({
     pageCount: 1,
     fiterInformation: [1965, 9, [""]],
     movieGenre: [],
-    favoriteList: JSON.parse(localStorage.getItem("movies")),
+    favoriteList: JSON.parse(localStorage.getItem("movies"))===null ? [] : JSON.parse(localStorage.getItem("movies")),
   },
   reducers: {
     changeMenuStatus: (state, action) => {
@@ -35,23 +35,17 @@ export const moviesSlice = createSlice({
       }
     },
     changeFilter: (state, action) => {
-      console.log(action.payload);
       state.fiterInformation = action.payload;
     },
     addFavoriteList: (state, action) => {
-      localStorage.setItem("movies", JSON.stringify([]));
-      state = {
-        ...state,
-        favoriteList: [...state.favoriteList, action.payload]
-      };
       localStorage.setItem("movies", JSON.stringify(state.favoriteList));
+      const addData = state.favoriteList.push(action.payload);
+      localStorage.setItem("movies", JSON.stringify(addData));
     },
     removeFavoriteList: (state, action) => {
       state.favoriteList = state.favoriteList.filter(
         (movie) => movie.title !== action.payload
       );
-
-      console.log(action.payload);
       localStorage.setItem("movies", JSON.stringify(state.favoriteList));
     },
   },
