@@ -141,7 +141,7 @@ function SingleMovie() {
                     <BsLink45Deg className="mb-1" /> Movie Page
                   </button>
                 </Link>
-                {favoriteList.find((e) => e.title === singleMovieData.title) ? (
+                {favoriteList && favoriteList.find((e) => e.title === singleMovieData.title) ? (
                   <button
                     className="px-3 py-2 fs-8 rounded-2 border-0 text-seventh fw-semibold bg-sixth"
                     onClick={() =>
