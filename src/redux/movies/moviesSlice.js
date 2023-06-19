@@ -40,7 +40,10 @@ export const moviesSlice = createSlice({
     },
     addFavoriteList: (state, action) => {
       localStorage.setItem("movies", JSON.stringify([]));
-      state.favoriteList.push(action.payload);
+      state = {
+        ...state,
+        favoriteList: [...state.favoriteList, action.payload]
+      };
       localStorage.setItem("movies", JSON.stringify(state.favoriteList));
     },
     removeFavoriteList: (state, action) => {
