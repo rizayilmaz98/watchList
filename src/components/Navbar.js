@@ -84,7 +84,7 @@ function Navbar() {
                   onClick={() => dispatch(changeMenuStatus("watchList"))}
                 >
                   <span className="nav-link text-center cursor fw-semibold rounded-5 bg-eighth px-lg-3">
-                    Watch List ({watchList.length})
+                    Watch List ({watchList && watchList.length})
                   </span>
                 </Link>
               </li>

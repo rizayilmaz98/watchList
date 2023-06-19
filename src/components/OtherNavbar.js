@@ -92,7 +92,7 @@ function OtherNavbar() {
                     activeMenu === "watchList" ? "activeMenuText" : ""
                   }`}
                 >
-                  Watch List ({watchList.length})
+                  Watch List ({watchList && watchList.length})
                 </span>
               </Link>
             </li>
